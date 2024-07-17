@@ -1,0 +1,25 @@
+.title_products{
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.box_container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid black;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+}
+.forms_section{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}

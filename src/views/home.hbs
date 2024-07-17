@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final - Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .title_products {
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .product_box {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .product_box li {
+            padding: 20px;
+        }
+        .product_box:hover {
+            transform: scale(1.02);
+        }
+        .product_box h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .product_box p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PROYECTO FINAL - ALUMNO: PEDRO QUIROS</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="title_products">Productos</h1>
+        {{#each allProducts}}
+        <ul class="product_box">
+            <li>
+                <h2>{{title}}</h2>
+                <p>Descripción: {{description}}</p>
+                <p>Precio: ${{price}}</p>
+                <p>Código Prod.: {{code}}</p>
+                <p>Stock: {{stock}}</p>
+            </li>
+        </ul>
+        {{/each}}
+    </div>
+</body>
+</html>
